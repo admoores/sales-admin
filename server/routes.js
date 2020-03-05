@@ -4,7 +4,7 @@ const path = require('path')
 const express = require('express')
 const bodyParser = require('body-parser')
 
-module.exports = (app, config) => {
+module.exports = (app, db, config) => {
   // External Middleware
   app.use(express.static(path.join(__dirname, '../client')))
   app.use(bodyParser.json())
